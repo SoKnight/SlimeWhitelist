@@ -1,0 +1,37 @@
+# Errors
+error-without-args: "&cНе указаны обязательные аргументы команды. Используйте '/swl help' для помощи."
+error-invalid-syntax: "&cНеверное использование команды. Используйте '/swl help' для помощи."
+error-command-not-found: "&cКоманда не найдена. Используйте '/swl help' для помощи."
+error-no-permission: "&cНедостаточно прав."
+error-arg-is-not-int: "&cАргумент %arg% должен быть числом."
+error-player-not-found: "&cИгрок %nickname% не найден."
+error-player-not-whitelisted: "&cИгрок %nickname% отсутствует в белом списке."
+error-player-online: "&cИгрок %nickname% сейчас играет на сервере."
+error-profile-not-found: "&cПрофиль игрока %nickname% отсутствует в базе данных."
+
+# Successfully command feedbacks
+gettime-success: "&fИгрок &b%player% &fоффлайн в течение: &b%time%"
+purge-success: "&fОчистка завершена, удалено &b%count% &fзаписей."
+reload-success: "&fSlimeWhitelist перезагружен."
+settime-success: "&fОффлайн-время установлено на &b%time% &fдля игрока &b%player%&f."
+
+# Whitelist
+list-header: "&f##          &7Вайтлист [%cur%/%max%]          &f##"
+list-body: "&f&l• &f%player% &f&l- &b%time%"
+list-footer: "&f##              &7-=**=-              &f##"
+list-failed-empty: "&cБаза данных пуста."
+
+# Help
+help-header: '&f##     &7Помощь по SlimeWhitelist     &f##'
+help-body: '&f&l• &b/swl %cmd% &f&l- &f%desc%'
+help-footer: '&f##              &7-=**=-              &f##'
+help-descriptions:
+  help: 'Показать эту страницу'
+  gettime: 'Показать оффлайн-время игрока'
+  list: 'Показать вайтлист с оффлайн-временем'
+  purge: 'Провести очистку базы данных'
+  reload: 'Перезагрузить плагин'
+  settime: 'Установить оффлайн-время игрока'
+help-nodes:
+  player: '<игрок>'
+  time: '<минуты>'

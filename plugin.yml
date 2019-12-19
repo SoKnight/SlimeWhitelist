@@ -1,0 +1,22 @@
+name: SlimeWhitelist
+main: ru.soknight.swl.SlimeWhitelist
+author: SoKnight
+version: 1.0.0
+api-version: 1.15
+commands:
+  swl:
+    description: Main plugin command
+    usage: /swl <args>
+permissions:
+  swl.help:
+    default: op
+  swl.gettime:
+    default: op
+  swl.list:
+    default: op
+  swl.purge:
+    default: op
+  swl.reload:
+    default: op
+  swl.settime:
+    default: op
