@@ -2,6 +2,7 @@ package ru.soknight.swl.commands;
 
 import java.util.List;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 
 import ru.soknight.swl.database.DatabaseManager;
@@ -37,10 +38,15 @@ public class CommandList {
         String body = Messages.getMessage("list-body");
         String footer = Messages.getMessage("list-footer");
         
+        long current = System.currentTimeMillis() / 60000;
+        
         sender.sendMessage(header);
         profiles.forEach(p -> {
-        	String date = DateFormater.getFormatedTime(p.getTime());
-        	sender.sendMessage(body.replace("%player%", p.getName()).replace("%time%", date));
+        	String name = p.getName();
+        	String date;
+        	if(Bukkit.getOfflinePlayer(name).isOnline()) date = Messages.getMessage("online");
+        	else date = DateFormater.getFormatedTime(current - p.getTime());
+        	sender.sendMessage(body.replace("%player%", name).replace("%time%", date));
         });
         sender.sendMessage(footer);
         return;

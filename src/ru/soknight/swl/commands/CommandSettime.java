@@ -1,5 +1,8 @@
 package ru.soknight.swl.commands;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 
@@ -16,7 +19,11 @@ public class CommandSettime {
         
         String name = args[1];
 	    if(!Requirements.isOffline(sender, name)) return;
-	    if(!Bukkit.getOfflinePlayer(name).isWhitelisted()) {
+	    
+	    List<String> whitelisted = new ArrayList<>();
+	    Bukkit.getWhitelistedPlayers().forEach(p -> whitelisted.add(p.getName()));
+	    
+	    if(!whitelisted.contains(name)) {
 	    	sender.sendMessage(Messages.getMessage("error-player-not-whitelisted").replace("%nickname%", name));
 	    	return; }
         

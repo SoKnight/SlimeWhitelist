@@ -14,6 +14,7 @@ gettime-success: "&fИгрок &b%player% &fоффлайн в течение: &b
 purge-success: "&fОчистка завершена, удалено &b%count% &fзаписей."
 reload-success: "&fSlimeWhitelist перезагружен."
 settime-success: "&fОффлайн-время установлено на &b%time% &fдля игрока &b%player%&f."
+online: "&aОнлайн"
 
 # Whitelist
 list-header: "&f##          &7Вайтлист [%cur%/%max%]          &f##"
