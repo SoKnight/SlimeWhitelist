@@ -1,7 +1,7 @@
 name: SlimeWhitelist
 main: ru.soknight.swl.SlimeWhitelist
 author: SoKnight
-version: 1.0.1
+version: 1.1.0
 api-version: 1.15
 commands:
   swl:
